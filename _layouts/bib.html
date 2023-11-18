@@ -64,13 +64,21 @@
             {%- if forloop.first == false -%},&nbsp;{%- endif -%}
             {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
           {%- endif -%}
+
+          {%- assign equal_contrib_auths = entry.equal_contrib_auths | split: ", " -%}
+          {%- if equal_contrib_auths contains author.last -%}
+            {%- assign author_first_name = "*" | append: author.first -%}
+          {%- else -%}
+            {%- assign author_first_name = author.first -%}
+          {%- endif -%}
+
           {%- if author_is_self -%}
-            <em>{{author.first}} {{author.last}}</em>
+            <em>{{author_first_name}} {{author.last}}</em>
           {%- else -%}
             {%- if coauthor_url -%}
-              <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+              <a href="{{coauthor_url}}">{{author_first_name}} {{author.last}}</a>
             {%- else -%}
-              {{author.first}} {{author.last}}
+              {{author_first_name}} {{author.last}}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -83,7 +91,7 @@
           {%- endif -%}
           {%- assign more_authors_show = '' -%}
           {%- for author in entry.author_array offset: author_array_limit -%}
-            {%- assign more_authors_show = more_authors_show | append: author.first | append: " " | append: author.last -%}
+            {%- assign more_authors_show = more_authors_show | append: author_first_name | append: " " | append: author.last -%}
             {%- unless forloop.last -%}
               {%- assign more_authors_show = more_authors_show | append: ", " -%}
             {%- endunless -%}
