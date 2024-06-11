@@ -1,3 +1,101 @@
+@article{hintersdorf2024clip_privacy,
+  title={Does CLIP Know My Face?}, 
+  author={Dominik Hintersdorf and Lukas Struppek and Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
+  year={2024},
+  journal = {Journal of Artificial Intelligence Research},
+  abstract = 	 {With the rise of deep learning in various applications, privacy concerns around the protection of training data have become a critical 
+  area of research. Whereas prior studies have focused on privacy risks in single-modal models, we introduce a novel method to assess privacy for 
+  multi-modal models, specifically vision-language models like CLIP. The proposed Identity Inference Attack (IDIA) reveals whether an individual 
+  was included in the training data by querying the model with images of the same person. Letting the model choose from a wide variety of possible 
+  text labels, the model reveals whether it recognizes the person and, therefore, was used for training.
+  Our large-scale experiments on CLIP demonstrate that individuals used for training can be identified with very high accuracy. We confirm that the 
+  model has learned to associate names with depicted individuals, implying the existence of sensitive information that can be extracted by adversaries. 
+  Our results highlight the need for stronger privacy protection in large-scale models and suggest that IDIAs can be used to prove the unauthorized 
+  use of data for training and to enforce privacy laws.},
+  abbr = {JAIR},
+  code = {https://github.com/d0mih/does-clip-know-my-face},
+  pdf = {https://arxiv.org/pdf/2209.07341}
+}
+
+@inproceedings{struppek2024adversarialllm, 
+  pages = { }, 
+  year = { 2024 }, 
+  booktitle = { ICLR 2024 Workshop on Secure and Trustworthy Large Language Models (SeT LLM) }, 
+  title = { Exploring the Adversarial Capabilities of Large Language Models }, 
+  author = { Lukas Struppek and Minh Hieu Le and Dominik Hintersdorf and Kristian Kersting },
+  abstract = {The proliferation of large language models (LLMs) has sparked widespread and general interest due to their strong language generation 
+  capabilities, offering great potential for both industry and research. While previous research delved into the security and privacy issues of 
+  LLMs, the extent to which these models can exhibit adversarial behavior remains largely unexplored. Addressing this gap, we investigate whether 
+  common publicly available LLMs have inherent capabilities to perturb text samples to fool safety measures, so-called adversarial examples resp. 
+  attacks. More specifically, we investigate whether LLMs are inherently able to craft adversarial examples out of benign samples to fool existing 
+  safe rails. Our experiments, which focus on hate speech detection, reveal that LLMs succeed in finding adversarial perturbations, effectively 
+  undermining hate speech detection systems. Our findings carry significant implications for (semi-)autonomous systems relying on LLMs, highlighting 
+  potential challenges in their interaction with existing systems and safety measures.},
+  abbr = {SeT LLM},
+  code = {https://github.com/LukasStruppek/Exploiting-Cultural-Biases-via-Homoglyphs},
+  pdf = {https://arxiv.org/pdf/2402.09132},
+}
+
+@inproceedings{struppek2024homoglyphs, 
+  pages = { }, 
+  year = { 2024 }, 
+  booktitle = { ICLR 2024 Workshop on Navigating and Addressing Data Problems for Foundation Models (DPFM) }, 
+  title = { Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis }, 
+  author = { Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting },
+  abstract = {Models for text-to-image synthesis have recently drawn a lot of interest. They are capable of producing high-quality images that depict 
+  a variety of concepts and styles when conditioned on textual descriptions. However, these models adopt cultural characteristics associated with 
+  specific Unicode scripts from their vast amount of training data, which may not be immediately apparent. We show that by simply inserting single 
+  non-Latin characters in the textual description, common models reflect cultural biases in their generated images. We analyze this behavior both 
+  qualitatively and quantitatively, and identify a model's text encoder as the root cause of the phenomenon. Such behavior can be interpreted as a 
+  model feature, offering users a simple way to customize the image generation and reflect their own cultural background. Yet, malicious users or 
+  service providers may also try to intentionally bias the image generation. One goal might be to create racist stereotypes by replacing Latin 
+  characters with similarly-looking characters from non-Latin scripts, so-called homoglyphs.},
+  abbr = {DPFM},
+  code = {https://github.com/LukasStruppek/Exploiting-Cultural-Biases-via-Homoglyphs},
+  pdf = {https://openreview.net/pdf?id=VeCTgo5f9q},
+}
+
+@inproceedings{struppek23smoothing, 
+  pages = { }, 
+  year = { 2024 }, 
+  booktitle = { The Twelfth International Conference on Learning Representations }, 
+  title = { Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks }, 
+  author = { Lukas Struppek and Dominik Hintersdorf and Kristian Kersting },
+  abstract = {Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing 
+  diverse benefits such as enhanced generalization and calibration. Its implications for preserving model privacy, however, have remained unexplored. 
+  To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative 
+  samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive 
+  analyses, we uncover that traditional label smoothing fosters MIAs, thereby increasing a model's privacy leakage. Even more, we reveal that 
+  smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, 
+  beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
+  abbr = {ICLR},
+  code = {https://github.com/LukasStruppek/Plug-and-Play-Attacks},
+  pdf = {https://openreview.net/pdf?id=1SbkubNdbW}
+}
+
+@article{hintersdorf2024nemo, 
+  pages = { }, 
+  year = { 2024 }, 
+  journal = { arXiv:2406.02366 }, 
+  title = { Finding NeMo: Localizing Neurons Responsible For Memorization in Diffusion Models }, 
+  author = { Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch },
+  abstract = {Diffusion models (DMs) produce very detailed and high-quality images. Their power results from extensive training on large amounts of data — 
+  usually scraped from the internet without proper attribution or consent from content creators. Unfortunately, this practice raises privacy and 
+  intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. 
+  Prior efforts prevent this issue by either changing the input to the diffusion process, thereby preventing the DM from generating memorized samples 
+  during inference, or removing the memorized data from training altogether. While those are viable solutions when the DM is developed and deployed 
+  in a secure and constantly monitored environment, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM 
+  itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to 
+  the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons 
+  are responsible for memorizing particular training samples. By deactivating these memorization neurons, we can avoid the replication of training 
+  data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of private and copyrighted data. In this way, our 
+  NeMo contributes to a more responsible deployment of DMs.},
+  abbr = {arXiv},
+  code = {https://github.com/ml-research/localizing_memorization_in_diffusion_models},
+  pdf = {https://arxiv.org/pdf/2406.02366},
+  equal_contrib_auths = {Struppek, Hintersdorf}
+}
+
 @inproceedings{brack2023sega, 
   booktitle = { Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS) }, 
   pages = { }, 
@@ -77,25 +175,6 @@
   pdf = {https://arxiv.org/pdf/2310.06372.pdf},
 }
 
-@article{struppek23smoothing, 
-  pages = { }, 
-  year = { 2023 }, 
-  journal = { arXiv:2310.06549 }, 
-  title = { Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks }, 
-  author = { Lukas Struppek and Dominik Hintersdorf and Kristian Kersting },
-  abstract = {Label smoothing -- using softened labels instead of hard ones -- is a widely adopted regularization method for deep learning, 
-  showing diverse benefits such as enhanced generalization and calibration. Its implications for preserving model privacy, however, 
-  have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which 
-  aim to generate class-representative samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information 
-  about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, thereby increasing a model's 
-  privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related 
-  information and leading to privacy preservation, beating state-of-the-art defenses. This establishes a practical and powerful novel way for 
-  enhancing model resilience against MIAs.},
-  abbr = {arXiv},
-  code = {https://github.com/LukasStruppek/Plug-and-Play-Attacks},
-  pdf = {https://arxiv.org/pdf/2310.06549.pdf}
-}
-
 @article{struppek23caia, 
   pages = { }, 
   year = { 2023 }, 
@@ -103,11 +182,12 @@
   title = { Class Attribute Inference Attacks: Inferring Sensitive Class Information by Diffusion-Based Attribute Manipulations }, 
   author = { Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting },
   abstract = {Neural network-based image classifiers are powerful tools for computer vision tasks, but they inadvertently reveal sensitive attribute 
-  information about their classes, raising concerns about their privacy. To investigate this privacy leakage, we introduce the first Class Attribute Inference Attack (CAIA), 
-  which leverages recent advances in text-to-image synthesis to infer sensitive attributes of individual classes in a black-box setting, while remaining 
-  competitive with related white-box attacks. Our extensive experiments in the face recognition domain show that CAIA can accurately infer undisclosed sensitive attributes, 
-  such as an individual's hair color, gender, and racial appearance, which are not part of the training labels. Interestingly, we demonstrate that adversarial 
-  robust models are even more vulnerable to such privacy leakage than standard models, indicating that a trade-off between robustness and privacy exists.},
+  information about their classes, raising concerns about their privacy. To investigate this privacy leakage, we introduce the first Class Attribute 
+  Inference Attack (Caia), which leverages recent advances in text-to-image synthesis to infer sensitive attributes of individual classes in a 
+  black-box setting, while remaining competitive with related white-box attacks. Our extensive experiments in the face recognition domain show that 
+  Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance, which are not part of 
+  the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy leakage than standard 
+  models, indicating that a trade-off between robustness and privacy exists.},
   abbr = {arXiv},
   code = {https://github.com/lukasstruppek/class_attribute_inference_attacks},
   pdf = {https://arxiv.org/pdf/2303.09289.pdf}
@@ -167,27 +247,6 @@
   abbr = {JAIR},
   code = {https://github.com/LukasStruppek/Exploiting-Cultural-Biases-via-Homoglyphs},
   pdf = {https://arxiv.org/pdf/2209.08891.pdf}
-}
-
-
-@article{hintersdorf23does,
-  title={Does CLIP Know My Face?}, 
-  author={Dominik Hintersdorf and Lukas Struppek and Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
-  year={2023},
-  eprint={2209.07341},
-  archivePrefix={arXiv},
-  journal = {arXiv:2209.07341},
-  primaryClass={cs.LG},
-  abstract = 	 {With the rise of deep learning in various applications, privacy concerns around the protection of training data has become a critical area of research. 
-  Whereas prior studies have focused on privacy risks in single-modal models, we introduce a novel method to assess privacy for multi-modal models, specifically vision-language models like CLIP. 
-  The proposed Identity Inference Attack (IDIA) reveals whether an individual was included in the training data by querying the model with images of the same person. 
-  Letting the model choose from a wide variety of possible text labels, the model reveals whether it recognizes the person and, therefore, was used for training. 
-  Our large-scale experiments on CLIP demonstrate that individuals used for training can be identified with very high accuracy. We confirm that the model has learned 
-  to associate names with depicted individuals, implying the existence of sensitive information that can be extracted by adversaries. Our results highlight the need 
-  for stronger privacy protection in large-scale models and suggest that IDIAs can be used to prove the unauthorized use of data for training and to enforce privacy laws.},
-  abbr = {arXiv},
-  code = {https://github.com/d0mih/does-clip-know-my-face},
-  pdf = {https://arxiv.org/pdf/2209.07341.pdf}
 }
 
 @incollection{hintersdorf2022learning, 
