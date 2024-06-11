@@ -1,3 +1,25 @@
+@article{hintersdorf2024defending, 
+  pages = { }, 
+  year = { 2023 }, 
+  journal = { arXiv:2310.08320 }, 
+  title = { Defending Our Privacy With Backdoors }, 
+  author = { Dominik Hintersdorf and Lukas Struppek and Daniel Neider and Kristian Kersting },
+  abstract = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. 
+  One of the concerns is that adversaries can extract information about the training data using privacy attacks. Unfortunately, the task of 
+  removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We 
+  propose a rather easy yet effective defense based on backdoor attacks to remove private information such as names and faces of individuals from 
+  vision-language models by fine-tuning them for only a few minutes instead of re-training them from scratch. Specifically, through strategic 
+  insertion of backdoors into text encoders, we align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the 
+  person's actual name. For image encoders, we map embeddings of individuals to be removed from the model to a universal, anonymous embedding. 
+  Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its performance using a specialized 
+  privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a 
+  promising avenue to enhance the privacy of individuals within models trained on uncurated web-scraped data.},
+  abbr = {arXiv},
+  code = {https://github.com/D0miH/Defending-Our-Privacy-With-Backdoors},
+  pdf = {https://arxiv.org/pdf/2310.08320},
+  selected = {true}
+}
+
 @article{hintersdorf2024clip_privacy,
   title={Does CLIP Know My Face?}, 
   author={Dominik Hintersdorf and Lukas Struppek and Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
@@ -15,6 +37,7 @@
   abbr = {JAIR},
   code = {https://github.com/d0mih/does-clip-know-my-face},
   pdf = {https://arxiv.org/pdf/2209.07341}
+  selected = {true}
 }
 
 @inproceedings{struppek2024adversarialllm, 
@@ -94,6 +117,7 @@
   code = {https://github.com/ml-research/localizing_memorization_in_diffusion_models},
   pdf = {https://arxiv.org/pdf/2406.02366},
   equal_contrib_auths = {Struppek, Hintersdorf}
+  selected = {true}
 }
 
 @inproceedings{brack2023sega, 
@@ -225,7 +249,6 @@
   abbr = {ICCV},
   code = {https://github.com/lukasstruppek/rickrolling-the-artist},
   pdf = {https://arxiv.org/pdf/2211.02408.pdf},
-  selected = {true}
 }
 
 @article{struppek23exploiting, 
@@ -332,7 +355,6 @@
   code = {https://github.com/ml-research/to-trust-or-not-to-trust-prediction-scores-for-membership-inference-attacks},
   equal_contrib_auths = {Struppek, Hintersdorf},
   pdf = {https://arxiv.org/pdf/2111.09076.pdf},
-  selected = {true}
 }
 
 @inproceedings{struppek22learning,
@@ -359,5 +381,4 @@ abbr = {FAccT},
 code = {https://github.com/ml-research/Learning-to-Break-Deep-Perceptual-Hashing},
 equal_contrib_auths = {Struppek, Hintersdorf},
 pdf = {https://arxiv.org/pdf/2111.06628.pdf},
-selected = {true}
 }
