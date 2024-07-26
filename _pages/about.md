@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='http://ml-research.github.io'>Artificial Intelligence and Machine Learning Lab TU Darmstadt</a>
+subtitle: Final year PhD student at the <a href='http://ml-research.github.io'>AI & ML Lab TU Darmstadt</a>
 
 profile:
   align: right
