@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Final year PhD student at the <a href='http://ml-research.github.io'>AI & ML Lab TU Darmstadt</a>
+subtitle: Researcher@<a href='https://www.dfki.de/en/web'>DFKI</a> and final year PhD student@<a href='http://ml-research.github.io'>AI & ML Lab TU Darmstadt</a>
 
 profile:
   align: right
