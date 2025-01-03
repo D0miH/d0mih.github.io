@@ -16,6 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My research is centered around the privacy and security of deep learning systems. As deep learning is increasingly used in real-world products and tasks, the data to train such systems is getting more and more relevant and important. In many of those tasks, the models have to be reliable and secure since during training, sensitive data might have been used, such as medical information or other personal data like for example images. In my work, I study possible threats and mitigation techniques to the security and privacy of deep learning models.
+My research focuses on the privacy and security of deep learning systems. As deep learning increasingly powers real-world applications, the data used to train these models becomes ever more critical. Many of these applications require models to be both reliable and secure, particularly when sensitive data, such as medical records or personal images, is involved in the training process.
+In my work, I investigate potential threats to the safety and security of deep learning models and develop strategies to mitigate these risks.
 
-I received by Masters from TU Darmstadt and am a PhD student under the supervision of <a href='https://ml-research.github.io/people/kkersting/index.html'>Prof. Kristian Kersting</a> since 2021.
+I received my Masters from TU Darmstadt and I am currenctly a PhD student at TU Darmstadt and the German Research Center for AI (DFKI) under the supervision of <a href='https://ml-research.github.io/people/kkersting/index.html'>Prof. Kristian Kersting</a>.
