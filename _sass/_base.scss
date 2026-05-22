@@ -164,6 +164,20 @@ blockquote {
 .profile {
   width: 100%;
 
+  // Reset browser default figure margins (notably Safari) to align image top with text.
+  figure {
+    margin: 0;
+  }
+
+  picture,
+  img {
+    display: block;
+  }
+
+  img {
+    min-height: 220px;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -184,13 +198,73 @@ blockquote {
   margin-right: 1rem;
 }
 
+.about-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0;
+
+  .about-text {
+    flex: 1 1 auto;
+  }
+
+  .profile {
+    flex: 0 0 32%;
+    width: 32%;
+    max-width: 360px;
+    margin: 0;
+
+    figure,
+    picture,
+    img {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.profile-left {
+    flex-direction: row-reverse;
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
 
+    img {
+      min-height: 0;
+    }
+
     .address {
       p {
         display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .about-layout {
+    display: block;
+
+    .profile {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto 1rem auto;
+
+      figure,
+      picture,
+      img {
+        height: auto;
+      }
+
+      img {
+        min-height: 220px;
       }
     }
   }
